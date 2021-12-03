@@ -1,4 +1,4 @@
-name: Test-statuses
+name: Test statuses
 
 on:
   push:
