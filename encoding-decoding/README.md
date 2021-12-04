@@ -9,28 +9,46 @@
 
 |       lib      | operations | ns/op | B/op | allocs/op |
 |:--------------:|:----------:|:-----:|:----:|:---------:|
-| encoding/json  |    1525567 | 791.8 |  208 |         3 |
-| encoding/gob   |     279340 |  4396 | 1408 |        26 |
-| protobuf/proto |    3985990 | 305.9 |   48 |         1 |
-
+| encoding/json  |    1494144 | 826.3 |  208 |         3 |
+| encoding/gob   |     278217 |  4983 | 1408 |        26 |
 
 ##### Decoding
 
 |       lib      | operations | ns/op | B/op | allocs/op |
 |:--------------:|:----------:|:-----:|:----:|:---------:|
-| encoding/json  |     383084 |  3450 | 1008 |        16 |
-| encoding/gob   |      49855 | 23928 | 7568 |       209 |
-| protobuf/proto |    1409575 | 885.5 |  312 |        13 |
-
+| encoding/json  |     347662 |  3428 | 1008 |        16 |
+| encoding/gob   |      45146 | 25728 | 7568 |       209 |
 
 ##### Encoding&Decoding
 
 |       lib      | operations | ns/op | B/op | allocs/op |
 |:--------------:|:----------:|:-----:|:----:|:---------:|
-| encoding/json  |     235290 |  5045 | 1544 |        27 |
-| encoding/gob   |      41368 | 29258 | 9120 |       237 |
-| protobuf/proto |     923396 |  1337 |  472 |        15 |
+| encoding/json  |     288964 |  4306 | 1168 |        18 |
+| encoding/gob   |      41682 | 30389 | 8936 |       234 |
 
+#### Marshaling
 
-If you find any bugs, I would appreciate it if you let me know. Also, if you have any questions, I would love to answer them.
-My contacts for communication: (mail - **mirovmusamir@gmail.com**), (telegram - **@MusamirMirov**)
+|       lib       | operations | ns/op | B/op | allocs/op |
+|:---------------:|:----------:|:-----:|:----:|:---------:|
+| encoding/json   |    1795035 | 705.6 |   64 |         1 |
+| mailru/easyjson |    2573928 | 510.9 |  240 |         2 |
+| protobuf/proto  |    4131890 | 288.2 |   48 |         1 |
+
+#### Unmarshalling
+
+|       lib       | operations | ns/op | B/op | allocs/op |
+|:---------------:|:----------:|:-----:|:----:|:---------:|
+| encoding/json   |     428583 |  3000 |  248 |        12 |
+| mailru/easyjson |    1204302 | 841.8 |   12 |         6 |
+| protobuf/proto  |    1395759 | 935.4 |  312 |        13 |
+
+##### Marshaling&Unmarshalling
+
+|       lib       | operations | ns/op | B/op | allocs/op |
+|:---------------:|:----------:|:-----:|:----:|:---------:|
+| encoding/json   |     342834 |  3757 |  312 |        13 |
+| mailru/easyjson |     996850 |  1292 |  252 |         8 |
+| protobuf/proto  |    1000000 |  1497 |  360 |        14 |
+
+If you find any bugs, I would appreciate it if you let me know. Also, if you have any questions, I would love to answer
+them. My contacts for communication: (mail - **mirovmusamir@gmail.com**), (telegram - **@MusamirMirov**)

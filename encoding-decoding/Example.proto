@@ -6,8 +6,8 @@ option go_package = "./encoding_decoding";
 
 //protoExample ...
 message protoExample {
-    int32 A = 1;
-    string B = 2;
-    repeated int32 C = 3;
-    repeated  string D = 4;
+  int32 A = 1;
+  string B = 2;
+  repeated int32 C = 3;
+  repeated  string D = 4;
 }
