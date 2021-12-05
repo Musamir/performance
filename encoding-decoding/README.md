@@ -3,11 +3,11 @@
 ## Contents
 - [Configurations](#Configurations)
 - [Benchmarks](#Benchmarks)
-  - [Encoding and Decoding](#Encoding and Decoding)
+  - [Encoding and Decoding](#Encoding-and-Decoding)
     - [Encoding](#Encoding)
     - [Decoding](#Decoding)
     - [Encoding&Decoding](#Encoding&Decoding)
-  - [Marshaling and Unmarshalling](#Marshaling and Unmarshalling)
+  - [Marshaling and Unmarshalling](#Marshaling-and-Unmarshalling)
     - [Marshaling](#Marshaling)
     - [Unmarshalling](#Unmarshalling)
     - [Marshaling&Unmarshalling](#Marshaling&Unmarshalling)
@@ -73,7 +73,7 @@
 | mailru/easyjson |     996850 |  1292 |  252 |         8 |
 | protobuf/proto  |    1000000 |  1497 |  360 |        14 |
 
-- #### quick-start
+- #### Quick start
 1. In case you want to test on your machine you need the go compiler version 1.13+ (
    if you don’t have, you can download the compiler on the official website [Go](https://golang.org/) and set your environment).
 2. Open your command line in the program folder and use the below Go command to run benchmarks.
