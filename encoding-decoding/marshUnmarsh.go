@@ -15,7 +15,7 @@ import (
 func StandardProtoMarshaling(data *ProtoExample) []byte {
 	marshaled, err := proto.Marshal(data)
 	if err != nil {
-		failed("proto marshaling", err)
+		failed("proto marshaling")
 	}
 	return marshaled
 }
@@ -23,7 +23,7 @@ func StandardProtoMarshaling(data *ProtoExample) []byte {
 //StandardProtoUnmarshalling ...
 func StandardProtoUnmarshalling(marshaled []byte, toUnmarshal *ProtoExample) {
 	if err := proto.Unmarshal(marshaled, toUnmarshal); err != nil {
-		failed("proto unmarshalling", err)
+		failed("proto unmarshalling")
 	}
 }
 
@@ -31,11 +31,11 @@ func StandardProtoUnmarshalling(marshaled []byte, toUnmarshal *ProtoExample) {
 func StandardProtoMarshalingUnmarshalling(data, result *ProtoExample) {
 	marshaled, err := proto.Marshal(data)
 	if err != nil {
-		failed("proto marshaling", err)
+		failed("proto marshaling")
 	}
 
 	if err := proto.Unmarshal(marshaled, result); err != nil {
-		failed("proto unmarshalling", err)
+		failed("proto unmarshalling")
 	}
 }
 
@@ -43,7 +43,7 @@ func StandardProtoMarshalingUnmarshalling(data, result *ProtoExample) {
 func StandardEasyJsonMarshaling(toMarshal *Example) []byte {
 	marshaled, err := easyjson.Marshal(toMarshal)
 	if err != nil {
-		failed("easyjson marshaling", err)
+		failed("easyjson marshaling")
 	}
 	return marshaled
 }
@@ -51,7 +51,7 @@ func StandardEasyJsonMarshaling(toMarshal *Example) []byte {
 //StandardEasyJsonUnmarshalling ...
 func StandardEasyJsonUnmarshalling(marshaled []byte, toUnmarshal *Example) {
 	if err := easyjson.Unmarshal(marshaled, toUnmarshal); err != nil {
-		failed("easyjson unmarshalling", err)
+		failed("easyjson unmarshalling")
 	}
 }
 
@@ -59,10 +59,10 @@ func StandardEasyJsonUnmarshalling(marshaled []byte, toUnmarshal *Example) {
 func StandardEasyJsonMarshalingUnmarshalling(data, result *Example) {
 	marshaled, err := easyjson.Marshal(data)
 	if err != nil {
-		failed("easyjson marshaling", err)
+		failed("easyjson marshaling")
 	}
 	if err := easyjson.Unmarshal(marshaled, result); err != nil {
-		failed("easyjson unmarshalling", err)
+		failed("easyjson unmarshalling")
 	}
 }
 
@@ -70,7 +70,7 @@ func StandardEasyJsonMarshalingUnmarshalling(data, result *Example) {
 func StandardJsonMarshaling(toMarshal *Example) []byte {
 	marshaled, err := json.Marshal(toMarshal)
 	if err != nil {
-		failed("json marshaling", err)
+		failed("json marshaling")
 	}
 	return marshaled
 }
@@ -78,7 +78,7 @@ func StandardJsonMarshaling(toMarshal *Example) []byte {
 //StandardJsonUnmarshalling ...
 func StandardJsonUnmarshalling(marshaled []byte, toUnmarshal *Example) {
 	if err := json.Unmarshal(marshaled, toUnmarshal); err != nil {
-		failed("json unmarshalling", err)
+		failed("json unmarshalling")
 	}
 }
 
@@ -86,9 +86,9 @@ func StandardJsonUnmarshalling(marshaled []byte, toUnmarshal *Example) {
 func StandardJsonMarshalingUnmarshalling(data, result *Example) {
 	marshaled, err := json.Marshal(data)
 	if err != nil {
-		failed("json marshaling", err)
+		failed("json marshaling")
 	}
 	if err := json.Unmarshal(marshaled, result); err != nil {
-		failed("json unmarshalling", err)
+		failed("json unmarshalling")
 	}
 }
